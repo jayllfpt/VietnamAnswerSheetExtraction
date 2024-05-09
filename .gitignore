@@ -5,5 +5,4 @@ model/model_save
 Contours.png
 img/*
 debug/*
-data/*
 *.jpg
