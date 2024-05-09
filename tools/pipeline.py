@@ -1,3 +1,7 @@
+from src.preprocess import Preprocess
+from src.extraction import examCodeExtract
+from src.extraction import AnswerExtract
+from src.extraction import StudentIDExtract
 import sys
 import os
 import yaml
@@ -7,10 +11,8 @@ import pprint
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.abspath(os.path.join(__dir__, '..')))
 
-from src.extraction import StudentIDExtract
-from src.extraction import AnswerExtract
-from src.extraction import examCodeExtract
-from src.preprocess import Preprocess
+
+image_path = r"data\sample (6).jpg"
 
 
 if __name__ == "__main__":
@@ -23,7 +25,7 @@ if __name__ == "__main__":
     ECExt = examCodeExtract(config)
     SIDExt = StudentIDExtract(config)
 
-    img = cv2.imread(r"data\sample (6).jpg")
+    img = cv2.imread(image_path)
     processed_img = prep(img)
     cv2.imwrite(r"debug\0_preprocessed.jpg", processed_img)
 

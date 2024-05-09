@@ -1,7 +1,3 @@
 __pycache__/
-model/__pycache__
-model/model_save
 
-img/*
-debug/*
-*.jpg
+debug/studentID/slice
