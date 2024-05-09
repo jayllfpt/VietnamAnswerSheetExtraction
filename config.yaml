@@ -1,0 +1,6 @@
+ANSWER: ['A', 'B', 'C', 'D']
+AREA_BOX: 100000
+CHECK_XY: 20000
+PIXEL_THRESHOLD: 150
+
+IMAGE_PATH: "img/paper00.png"

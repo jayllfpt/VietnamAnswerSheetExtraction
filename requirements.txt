@@ -1,0 +1,5 @@
+opencv-python==4.8.1.78
+imutils==0.5.4
+numpy==1.23.5
+pyyaml
+Flask==3.0.0
