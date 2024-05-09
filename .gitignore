@@ -2,8 +2,6 @@ __pycache__/
 model/__pycache__
 model/model_save
 
-Contours.png
 img/*
 debug/*
-data/*
 *.jpg
