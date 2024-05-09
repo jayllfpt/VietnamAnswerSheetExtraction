@@ -1,7 +1,3 @@
-from src.preprocess import Preprocess
-from src.extraction import examCodeExtract
-from src.extraction import AnswerExtract
-from src.extraction import StudentIDExtract
 import sys
 import os
 import yaml
@@ -11,8 +7,13 @@ import pprint
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.abspath(os.path.join(__dir__, '..')))
 
+from src.preprocess import Preprocess
+from src.extraction import examCodeExtract
+from src.extraction import AnswerExtract
+from src.extraction import StudentIDExtract
 
-image_path = r"data\sample (6).jpg"
+
+image_path = r"data\sample (2).jpg"
 
 
 if __name__ == "__main__":
