@@ -6,16 +6,25 @@ Vietnamese High School Graduation Examination Answer Extraction using openCV-pyt
 2. Run ```pip install -r requirements.txt```
 3. Change the image path in ```tools/pipeline.py```
 4. Run ```python tools/pipeline.py```
+
 ![screenshot: pipeline CLI](screenshot/pipelineCLI.png)
 
 # Notes
-- Highly recommend using conda/miniconda for avoiding evironments conflicts.
-- Test specific features? use the code in ```tools/```
+- Highly recommend using [conda/miniconda](https://docs.anaconda.com/free/miniconda/miniconda-install/) for avoiding evironments conflicts.
+- Test specific features? use the code in [```tools/```](./tools/)
 
 # APIs
 1. Running using ```uvicorn app:app --port 1234```
-2. Test API via Swagger UI
+2. Test API via Swagger UI: [localhost:1234/docs](localhost:1234/docs)
+
 ![screenshot: Swagger UI](screenshot/swaggerUI.jpeg)
+
+# Containerization
+1. Download and install [Docker](https://docs.docker.com/engine/install/)
+2. Have a look at [Dockerfile](Dockerfile)
+3. Build image ```docker build -t VNASE .```
+4. Run container ```docker run -d --name vnase -p 80:80 VNASE```
+5. Test API via Swagger UI: [localhost/docs](localhost/docs)
 
 # Algorithms
 ![diagram](screenshot/VNAnswerSheetExtractionDiagram.png)
