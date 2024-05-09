@@ -1,0 +1,48 @@
+# General config
+DEBUG_DIR: "debug/"
+PREP_DEBUG_DIR: "debug/0-paper/"
+ANSWER_DEBUG_DIR: "debug/answer/"
+STUDENT_ID_DEBUG_DIR: "debug/studentID/"
+EXAM_CODE_DEBUG_DIR: "debug/examCode/"
+IMAGE_SIZE_DEFAULT: [1065, 1520]
+
+# Preprocess config
+GRABCUT_REC_SIZE: 5
+PREP_VISUALIZE: True # False
+
+# Answer extract config
+ANSWER: ["A", "B", "C", "D"]
+PIXEL_THRESHOLD: 110
+SUCCESS_THRESHOLD: 0.95
+ANSWER_AREA_TOP: 300
+ANSWER_AREA_BOT: 1444
+ANSWER_VISUALIZE: True # False
+
+# Student ID extract config
+SID_TOP: 110
+SID_LEFT: 750
+SID_BOT: 475
+SID_RIGHT: 900
+SID_VISUALIZE: True # False
+
+# Exam Code extract config
+EC_TOP: 110
+EC_LEFT: 910
+EC_BOT: 475
+EC_RIGHT: 980
+EC_VISUALIZE: True # False
+
+# Grid Config
+BUBBLE_SIZE: 23
+TOP_1A: 40
+LEFT_1A: 10
+BUBBLE_DIST: 41
+QUESTION_DIST: 26
+BOX_DIST: 156
+COL_DIST: 241
+COL_HEIGHT: 939
+COL_WIDTH: 203
+
+# Visualize config
+GRID_THICKNESS: 1
+GRID_COLOR: [0, 0, 255]
