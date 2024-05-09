@@ -1,7 +1,3 @@
-from src.extraction import StudentIDExtract
-from src.extraction import AnswerExtract
-from src.extraction import examCodeExtract
-from src.preprocess import Preprocess
 import sys
 import os
 import yaml
@@ -10,6 +6,11 @@ import pprint
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.abspath(os.path.join(__dir__, '..')))
+
+from src.extraction import StudentIDExtract
+from src.extraction import AnswerExtract
+from src.extraction import examCodeExtract
+from src.preprocess import Preprocess
 
 
 if __name__ == "__main__":
