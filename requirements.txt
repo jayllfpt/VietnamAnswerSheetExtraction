@@ -2,4 +2,6 @@ opencv-python-headless
 imutils
 numpy
 pyyaml
-Flask
+fastapi
+uvicorn
+pillow

@@ -14,5 +14,5 @@ if __name__ == "__main__":
         config = yaml.safe_load(file)
     P = Preprocess(config)
 
-    img = cv2.imread(r"data\sample (6).jpg")
+    img = cv2.imread(r"data\sample (2).jpg")
     cv2.imwrite(r"debug\0_preprocessed.jpg", P(img))
