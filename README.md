@@ -43,7 +43,9 @@ Vietnamese High School Graduation Examination Answer Extraction using openCV-pyt
 ![diagram](screenshot/VNAnswerSheetExtractionDiagram.png)
 
 **Input:** Answer sheet captured image
+
 **Output:** List of answers, student ID and exam code
+
 **Sample input:** 
 
 ![original](data/sample%20(2).jpg)
@@ -52,6 +54,9 @@ Vietnamese High School Graduation Examination Answer Extraction using openCV-pyt
     - Remove background (using [*GrabCut*](https://docs.opencv.org/3.4/d8/d83/tutorial_py_grabcut.html))
 
     ![removeBg](debug/0-paper/3_grabCut.jpg) 
+
+    - Paper contour detect
+
     ![pageDetect](debug/0-paper/4_pageDetect.jpg)
 
     - [Perspective transform](https://docs.opencv.org/3.4/da/d6e/tutorial_py_geometric_transformations.html)
@@ -60,7 +65,7 @@ Vietnamese High School Graduation Examination Answer Extraction using openCV-pyt
 
 - **Phase 2:** Extraction
     - Answer extraction:
-        - Preprocess: crop - convert to grayscale - [remove noise](https://www.analyticsvidhya.com/blog/2022/08/image-contrast-enhancement-using-clahe/)
+        - Preprocess: crop - convert to grayscale - [remove noise](https://www.analyticsvidhya.com/blog/2022/08/image-contrast-enhancement-using-clahe/) - [erore and dilate](https://docs.opencv.org/3.4/db/df6/tutorial_erosion_dilatation.html)
 
         ![dilate-answer](debug/answer/5_dilate_canny.jpg) 
 
