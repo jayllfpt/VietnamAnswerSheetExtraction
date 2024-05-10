@@ -32,5 +32,7 @@ class Preprocess():
         img = remove_background(img, REC_SIZE)
         if self.config["PREP_VISUALIZE"]:
             cv2.imwrite(DEBUG_DIR + "/3_grabCut.jpg", img)
-
-        return cv2.resize(crop_paper(img, orig_img), PAPER_SIZE)
+        final, img = crop_paper(img, orig_img)
+        if self.config["PREP_VISUALIZE"]:
+            cv2.imwrite(DEBUG_DIR + "/4_pageDetect.jpg", img)
+        return cv2.resize(final, PAPER_SIZE)

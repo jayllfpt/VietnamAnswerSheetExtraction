@@ -76,7 +76,8 @@ def crop_paper(img, orig_img):
     # Detecting Edges through Contour approximation.
     # Loop over the contours.
     if len(page) == 0:
-        return orig_img
+        return orig_img, orig_img
+    
     for c in page:
         # Approximate the contour.
         epsilon = 0.02 * cv2.arcLength(c, True)
@@ -97,4 +98,4 @@ def crop_paper(img, orig_img):
     final = cv2.warpPerspective(orig_img, M, (destination_corners[2][0], destination_corners[2][1]),
                                 flags=cv2.INTER_LINEAR)
 
-    return final
+    return final, cv2.drawContours(orig_img, page, -1, (101, 13, 255), 2)

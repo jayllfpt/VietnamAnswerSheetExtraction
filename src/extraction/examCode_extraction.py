@@ -17,7 +17,6 @@ class examCodeExtract():
         DEBUG_DIR = self.config['EXAM_CODE_DEBUG_DIR']
         if self.config['EC_VISUALIZE']:
             os.makedirs(DEBUG_DIR, exist_ok=True)
-            os.makedirs(os.path.join(DEBUG_DIR, "slice"), exist_ok=True)
 
         img = img[t:b, l:r]
         if self.config['EC_VISUALIZE']:
